@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.sugarormexample.UpdateDeleteActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Update / Delete"
+                android:textAlignment="gravity"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteButton"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_delete"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_name"
+            android:text="Name: " />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_email"
+            android:text="E-mail: " />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name"
+            android:layout_toRightOf="@+id/tv_email" />
+
+        <TextView
+            android:id="@+id/tv_PhoneNumber"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_pn"
+            android:text="Phone Number: " />
+
+        <EditText
+            android:id="@+id/et_pn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/et_email"
+            android:layout_below="@+id/et_email"
+            android:layout_toRightOf="@+id/tv_PhoneNumber"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/tv_Area"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_area"
+            android:layout_below="@+id/et_pn"
+            android:text="Area: " />
+
+        <EditText
+            android:id="@+id/et_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_pn"
+            android:layout_toRightOf="@+id/tv_Area" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:id="@+id/updateButton"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
